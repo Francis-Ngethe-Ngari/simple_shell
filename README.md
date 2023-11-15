@@ -1,8 +1,8 @@
-# **Simple Shell**
+# **Simple_Shell**
 
 - Simple Shell Project entails multiple tasks which contribute to building up a user-defined shell.
 
-## define Unix shell?
+## **define Unix shell ?**
 
 It's a command-line interpreter or shell that provides a command-line interface for Unix-like operating systems.
 
