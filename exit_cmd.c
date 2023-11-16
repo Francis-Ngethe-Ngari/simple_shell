@@ -10,5 +10,5 @@
  */
 void exit_cmd(void)
 {
-	exit(0);
+	exit(EXIT_SUCCESS);
 }
