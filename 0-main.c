@@ -13,9 +13,9 @@ int main(void)
 	while ((cmd = _getinput()) != NULL)
 	{
 		show_prompt();
-		if (strcmp(cmd, "exit") == 0)
+		if (_strcmp(cmd, "exit") == 0)
 			exit_cmd();
-		else if (strcmp(cmd, "env") == 0)
+		else if (_strcmp(cmd, "env") == 0)
 			print_env();
 		run_cmd(cmd);
 		free(cmd);

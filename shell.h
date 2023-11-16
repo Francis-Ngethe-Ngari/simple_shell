@@ -14,7 +14,7 @@
 extern char **environ;
 
 int _strlen(char *str);
-int _strcmp(char *str_1, char *str_2);
+int _strcmp(const char *str_1, const char *str_2);
 void show_prompt(void);
 char *_getinput(void);
 void run_cmd(char *input);

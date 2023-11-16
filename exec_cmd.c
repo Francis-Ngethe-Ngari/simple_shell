@@ -58,12 +58,12 @@ void run_cmd(char *input)
 				itr++;
 			}
 			argv[itr] = NULL;
-			if (strcmp(argv[0], "exit") == 0)
+			if (_strcmp(argv[0], "exit") == 0)
 			{
 				exit_cmd();
 				return;/*Exit the function*/
 			}
-			else if (strcmp(argv[0], "setenv") == 0)
+			else if (_strcmp(argv[0], "setenv") == 0)
 			{
 				if (itr == 3)
 				{
@@ -73,7 +73,7 @@ void run_cmd(char *input)
 						char err_m[128];
 
 						snprintf(err_m, sizeof(err_m), "setenv: Failed to set %s\n", argv[1]);
-						write(2, err_m, strlen(err_m));
+						write(2, err_m, _strlen(err_m));
 					}
 				}
 				else
@@ -82,7 +82,7 @@ void run_cmd(char *input)
 					write(2, "setenv: Incorrect syntax.\n", 27);
 				}
 			}
-			else if (strcmp(argv[0], "unsetenv") == 0)
+			else if (_strcmp(argv[0], "unsetenv") == 0)
 			{
 				if (itr == 2)
 				{
@@ -104,13 +104,13 @@ void run_cmd(char *input)
 			/*Handle logical operators*/
 			if (itr > 0)
 			{
-				if (strcmp(argv[0], "&&") == 0)
+				if (_strcmp(argv[0], "&&") == 0)
 				{
 					if (result != 0)
 					{
 						continue;/*Skip execution of subsequent commands*/
 					}
-				} else if (strcmp(argv[0], "||") == 0)
+				} else if (_strcmp(argv[0], "||") == 0)
 				{
 					if (result == 0)
 					{
