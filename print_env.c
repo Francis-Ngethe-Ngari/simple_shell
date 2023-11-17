@@ -9,15 +9,15 @@
  * Return: Nothing.
  *
  */
+
 void print_env(void)
 {
-	extern char **environ;
-	int itr = 0;
+	char **env = environ;
 
-	while (environ[itr] != NULL)
+	while (*env != NULL)
 	{
-		write(STDOUT_FILENO, environ[itr], _strlen(environ[itr]));
+		write(STDOUT_FILENO, *env, _strlen(*env));
 		write(STDOUT_FILENO, "\n", 1);
-		itr++;
+		env++;
 	}
 }
