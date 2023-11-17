@@ -58,49 +58,13 @@ void run_cmd(char *input)
 				itr++;
 			}
 			argv[itr] = NULL;
+			/*
 			if (_strcmp(argv[0], "exit") == 0)
 			{
 				exit_cmd();
-				return;/*Exit the function*/
+				return;
 			}
-			else if (_strcmp(argv[0], "setenv") == 0)
-			{
-				if (itr == 3)
-				{
-					if (setenv(argv[1], argv[2], 1) != 0)
-					{
-						/*Print an error message to stderr using write*/
-						char err_m[128];
-
-						snprintf(err_m, sizeof(err_m), "setenv: Failed to set %s\n", argv[1]);
-						write(2, err_m, _strlen(err_m));
-					}
-				}
-				else
-				{
-					/*Print an error message to stderr for incorrect syntax*/
-					write(2, "setenv: Incorrect syntax.\n", 27);
-				}
-			}
-			else if (_strcmp(argv[0], "unsetenv") == 0)
-			{
-				if (itr == 2)
-				{
-					if (unsetenv(argv[1]) != 0)
-					{
-						/*Print an error message to stderr using write*/
-						char err_m[128];
-
-						snprintf(err_m, sizeof(err_m), "unsetenv: Failed%s\n", argv[1]);
-						write(2, err_m, _strlen(err_m));
-					}
-				}
-				else
-				{
-					/*Print an error message to stderr for incorrect syntax*/
-					write(2, "unsetenv: Incorrect syntax. Use unsetenv VARIABLE\n", 50);
-				}
-			}
+			*/
 			/*Handle logical operators*/
 			if (itr > 0)
 			{

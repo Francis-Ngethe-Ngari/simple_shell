@@ -14,7 +14,7 @@ int main(void)
 	{
 		show_prompt();
 		if (_strcmp(cmd, "exit") == 0)
-			exit_cmd();
+			exit(0);
 		else if (_strcmp(cmd, "env") == 0)
 			print_env();
 		run_cmd(cmd);
